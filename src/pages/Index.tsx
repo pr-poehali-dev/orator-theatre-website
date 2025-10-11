@@ -8,6 +8,7 @@ import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 
 export default function Index() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -85,6 +86,8 @@ export default function Index() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-heading font-bold text-primary">ТЕАТР СВИБ</h1>
+            
+            {/* Desktop Menu */}
             <div className="hidden md:flex gap-8">
               <a href="#home" className="hover:text-primary transition-colors">Главная</a>
               <a href="#performances" className="hover:text-primary transition-colors">Спектакли</a>
@@ -94,7 +97,71 @@ export default function Index() {
               <a href="#gallery" className="hover:text-primary transition-colors">Галерея</a>
               <a href="#contacts" className="hover:text-primary transition-colors">Контакты</a>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+              className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Меню"
+            >
+              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 space-y-2 animate-fade-in">
+              <a 
+                href="#home" 
+                className="block py-2 px-4 hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Главная
+              </a>
+              <a 
+                href="#performances" 
+                className="block py-2 px-4 hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Спектакли
+              </a>
+              <a 
+                href="#troupe" 
+                className="block py-2 px-4 hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Труппа
+              </a>
+              <a 
+                href="#education" 
+                className="block py-2 px-4 hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Обучение
+              </a>
+              <a 
+                href="#schedule" 
+                className="block py-2 px-4 hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Афиша
+              </a>
+              <a 
+                href="#gallery" 
+                className="block py-2 px-4 hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Галерея
+              </a>
+              <a 
+                href="#contacts" 
+                className="block py-2 px-4 hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Контакты
+              </a>
+            </div>
+          )}
         </div>
       </nav>
 
