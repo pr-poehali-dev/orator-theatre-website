@@ -86,7 +86,7 @@ export default function Index() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <img 
-              src="https://cdn.poehali.dev/projects/904330b1-5fae-4e47-9ed2-680c8c2ff11d/files/19d3741b-3a08-4900-8c43-ab53baad75e3.jpg" 
+              src="https://cdn.poehali.dev/projects/904330b1-5fae-4e47-9ed2-680c8c2ff11d/files/8635c727-a275-4ca8-b7a5-f7c614ea0061.jpg" 
               alt="Театр Комильфо" 
               className="h-12 md:h-16 w-auto"
             />
