@@ -85,7 +85,11 @@ export default function Index() {
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-heading font-bold text-primary">ТЕАТР «КОМИЛЬФО»</h1>
+            <img 
+              src="https://cdn.poehali.dev/projects/904330b1-5fae-4e47-9ed2-680c8c2ff11d/files/19d3741b-3a08-4900-8c43-ab53baad75e3.jpg" 
+              alt="Театр Комильфо" 
+              className="h-12 md:h-16 w-auto"
+            />
             
             {/* Desktop Menu */}
             <div className="hidden md:flex gap-8">
