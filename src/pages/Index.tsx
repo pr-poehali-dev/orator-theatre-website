@@ -171,7 +171,7 @@ export default function Index() {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h2 className="text-6xl md:text-8xl font-heading font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              ТЕАТР СВИБ
+              ТЕАТР «КОМИЛЬФО»
             </h2>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               Где оживают истории и рождается искусство
